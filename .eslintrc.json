@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "next",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "globals": {
+    "React": "readonly"
+  },
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "prefer-const": "error",
+    "no-var": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "react/jsx-filename-extension": ["error", { "extensions": [".ts", ".tsx"] }],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "no-unused-vars": "off",
+    "jsx-quotes": ["error", "prefer-double"],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

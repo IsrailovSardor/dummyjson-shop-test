@@ -1,0 +1,150 @@
+.header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 4%);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    height: 64px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 24px;
+    position: relative;
+  }
+
+  &__logo {
+    color: #171717;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+  }
+
+  &__user {
+    align-items: center;
+    color: #171717;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: 6px;
+
+    svg {
+      stroke-width: 1.5;
+    }
+  }
+
+  &__burger {
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    height: 36px;
+    justify-content: center;
+    margin-left: 8px;
+    padding: 0;
+    width: 36px;
+    z-index: 102;
+
+    svg {
+      stroke: #171717;
+      stroke-width: 2;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 32px;
+
+    a {
+      color: #444;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #171717;
+      }
+    }
+  }
+
+  &__overlay {
+    background: rgb(0 0 0 / 18%);
+    inset: 64px 0 0;
+    position: fixed;
+    z-index: 100;
+  }
+}
+
+@media (width <= 900px) {
+  .header__right {
+    gap: 10px;
+  }
+
+  .header__user {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__nav {
+    align-items: flex-start;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 101;
+
+    a {
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 1.08rem;
+      padding: 16px 24px;
+      width: 100%;
+    }
+  }
+
+  .header__nav_open {
+    display: flex;
+  }
+}
+
+@media (width <= 600px) {
+  .header__container {
+    height: 48px;
+    padding: 6px 4px;
+  }
+
+  .header__logo {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .header__user {
+    font-size: 0.98rem;
+  }
+}
